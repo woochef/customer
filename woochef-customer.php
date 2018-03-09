@@ -15,9 +15,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-final class Customer {
+final class WooChefCustomer {
 	/**
-	 * Customer version.
+	 * WooChefCustomer version.
 	 *
 	 * @var string
 	 */
@@ -28,18 +28,18 @@ final class Customer {
 	 *
 	 * @since 0.1
 	 *
-	 * @var   Customer
+	 * @var   WooChefCustomer
 	 */
 	protected static $instance = null;
 
 	/**
-	 * Customer Instance.
+	 * WooChefCustomer Instance.
 	 *
 	 * @since  0.1
 	 *
 	 * @static
 	 *
-	 * @return Customer  the instance.
+	 * @return WooChefCustomer  the instance.
 	 */
 	public static function instance() {
 		if ( is_null( self::$instance ) ) {
@@ -53,10 +53,10 @@ final class Customer {
 /**
  * @since  0.1
  *
- * @return Customer  the instance.
+ * @return WooChefCustomer  the instance.
  */
 function woochef_customer() {
-	return Customer::instance();
+	return WooChefCustomer::instance();
 }
 
 woochef_customer();
